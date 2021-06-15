@@ -1,10 +1,8 @@
 import { createStore, applyMiddleware, compose } from 'redux'
-import createSagaMiddleware from 'redux-saga'
 import thunk from 'redux-thunk'
 
 import { AppState } from '../redux/types'
 import createRootReducer from '../redux/reducers'
-import rootSaga from './saga'
 
 export const initState: AppState = {
   starwars: {
@@ -14,7 +12,6 @@ export const initState: AppState = {
 }
 
 export default function makeStore(initialState = initState) {
-  const sagaMiddleware = createSagaMiddleware()
   const middleware = thunk
   let composeEnhancers = compose
 
@@ -30,10 +27,8 @@ export default function makeStore(initialState = initState) {
   const store = createStore(
     createRootReducer(),
     initialState,
-    composeEnhancers(applyMiddleware(middleware, sagaMiddleware))
+    composeEnhancers(applyMiddleware(middleware))
   )
-
-  sagaMiddleware.run(rootSaga)
 
   if ((module as any).hot) {
     (module as any).hot.accept('./reducers', () => {

@@ -7,7 +7,7 @@ import Search from '../Search'
 import MainTable from '../MainTable'
 import './StarWarsApp.scss'
 
-import { fetchCharacters, getStarshipsRequest } from '../../redux/actions/starwars'
+import { fetchCharacters } from '../../redux/actions/starwars'
 import { AppState } from '../../redux/types'
 import useCharacters from '../../hooks/useCharacters'
 
@@ -22,11 +22,6 @@ const StarWarsApp = () => {
 
   useEffect(() => {
     dispatch(fetchCharacters())
-    setLoading(loading)
-  }, [dispatch, loading])
-
-  useEffect(() => {
-    dispatch(getStarshipsRequest())
     setLoading(loading)
   }, [dispatch, loading])
 

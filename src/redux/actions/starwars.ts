@@ -4,9 +4,6 @@ import { Starship } from '../types'
 import {
   GetCharactersAction,
   GET_CHARACTERS,
-  GET_STARSHIPS_REQUEST,
-  GET_STARSHIPS_SUCCESS,
-  GET_STARSHIPS_FAIL,
 } from '../types'
 
 export function getCharacters(characters: any): GetCharactersAction {
@@ -14,28 +11,6 @@ export function getCharacters(characters: any): GetCharactersAction {
     type: GET_CHARACTERS,
     payload: {
       characters,
-    },
-  }
-}
-
-export const getStarshipsRequest = () => {
-  return {
-    type: GET_STARSHIPS_REQUEST,
-  }
-}
-
-export const getStarshipsSuccess = (starships: any) => {
-  return {
-    type: GET_STARSHIPS_SUCCESS,
-    payload: starships,
-  }
-}
-
-export const getStarshipsFail = (error: any) => {
-  return {
-    type: GET_STARSHIPS_FAIL,
-    payload: {
-      error,
     },
   }
 }
