@@ -1,13 +1,7 @@
 export const GET_CHARACTERS = 'GET_CHARACTERS'
-export const GET_CHARACTERS_REQUEST = 'GET_CHARACTERS_REQUEST'
-export const GET_CHARACTERS_SUCCESS = 'GET_CHARACTERS_SUCCESS'
-export const GET_CHARACTERS_FAIL = 'GET_CHARACTERS_FAIL'
 
 export type StarWarsActions = 
 | GetCharactersAction
-| GetCharactersRequestAction
-| GetCharactersSuccessAction
-| GetCharactersFailAction
 
 export type StarWarsState = {
   list: any[]
@@ -18,24 +12,6 @@ export type GetCharactersAction = {
   type: typeof GET_CHARACTERS
   payload: {
     characters: any
-  }
-}
-
-export type GetCharactersRequestAction = {
-  type: typeof GET_CHARACTERS_REQUEST
-}
-
-export type GetCharactersSuccessAction = {
-  type: typeof GET_CHARACTERS_SUCCESS
-  payload: {
-    starships: any
-  }
-}
-
-export type GetCharactersFailAction = {
-  type: typeof GET_CHARACTERS_FAIL
-  payload: {
-    error: any
   }
 }
 
