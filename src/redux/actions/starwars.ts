@@ -4,7 +4,6 @@ import { Starship } from '../types'
 import {
   GetCharactersAction,
   GET_CHARACTERS,
-  GET_CHAR_AND_STARSHIP,
   GET_STARSHIPS_REQUEST,
   GET_STARSHIPS_SUCCESS,
   GET_STARSHIPS_FAIL,

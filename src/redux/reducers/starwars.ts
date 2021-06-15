@@ -1,4 +1,4 @@
-import { StarWarsState, StarWarsActions, GET_CHARACTERS, GET_STARSHIPS_SUCCESS, GET_CHAR_AND_STARSHIP } from '../types'
+import { StarWarsState, StarWarsActions, GET_CHARACTERS, GET_STARSHIPS_SUCCESS } from '../types'
 
 export default function starwars(
   state: any = {
