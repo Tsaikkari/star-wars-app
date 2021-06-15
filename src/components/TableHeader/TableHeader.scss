@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+}
+
+thead {
+  color: #000;
+
+  @media (max-width: 1024px) {
+    background-color: #fff;
+  }
+}
+
+th.titles {
+  &__title--name {
+    padding: 0 0 1.2rem 7.1rem;
+  }
+
+  &__title--starships {
+    padding: 0 0 1.2rem 0.8rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header .navbar .navbar-expand .navbar-light {
+    background-color: #fff;
+  }
+}

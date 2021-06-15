@@ -1,0 +1,22 @@
+.table {
+  &__row {
+    background-color: #ffffff;
+    border-top: solid 2px #e0e6ec;
+  }
+
+  &__row:hover {
+    background-color: rgb(8, 207, 8);
+  }
+
+  &__row--charactername {
+    padding-left: 6rem;
+    color: #36322a;
+    font-size: large;
+    font-weight: bold;
+
+    &:hover {
+      color: #223b53;
+      text-decoration: none;
+    }
+  }
+}
