@@ -14,6 +14,7 @@ const TableRow = ({ name, starships }: TableRowProps) => {
       </td>
       <td>
         {starships.map((ship: any, index) => {
+          
           return (
             ship.char === name && 
             <div className="table__row--languages" key={index}>

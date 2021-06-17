@@ -15,6 +15,7 @@ const StarWarsApp = () => {
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(true)
   const starships = useSelector((state: AppState) => state.starwars.starshipsList)
+  console.log('starships', starships)
 
   const filteredCharacters = useCharacters(input)
 

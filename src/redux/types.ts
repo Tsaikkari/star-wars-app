@@ -1,7 +1,9 @@
 export const GET_CHARACTERS = 'GET_CHARACTERS'
+export const GET_CHAR_AND_STARSHIP = 'GET_CHAR_AND_STARSHIP'
 
 export type StarWarsActions = 
 | GetCharactersAction
+| GetCharAndStarshipAction
 
 export type StarWarsState = {
   list: any[]
@@ -12,6 +14,15 @@ export type GetCharactersAction = {
   type: typeof GET_CHARACTERS
   payload: {
     characters: any
+  }
+}
+
+export type GetCharAndStarshipAction = {
+  type: typeof GET_CHAR_AND_STARSHIP
+  payload: {
+    char: any
+    starship: any
+    starships: any[]
   }
 }
 
@@ -53,11 +64,10 @@ export type TableCellProps = {
 }
 
 export type SingleCharacterProps = {
+  flag: string
   name: string
 }
 
 export type Character = TableRowProps & {
   [key: string]: any
 }
-
-

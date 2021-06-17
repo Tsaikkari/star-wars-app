@@ -7,6 +7,7 @@ import { MainTableProps } from '../../redux/types'
 import './MainTable.scss'
 
 const MainTable = ({ characters, starships }: MainTableProps) => {
+  console.log('starships in maintable', starships)
   
   return (
     <Table striped bordered hover responsive className="table">

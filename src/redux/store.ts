@@ -30,6 +30,7 @@ export default function makeStore(initialState = initState) {
     composeEnhancers(applyMiddleware(middleware))
   )
 
+
   if ((module as any).hot) {
     (module as any).hot.accept('./reducers', () => {
       const nextReducer = require('./reducers').default
