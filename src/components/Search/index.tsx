@@ -4,9 +4,8 @@ import { SearchProps } from '../../redux/types'
 import './Search.scss'
 
 const Search = ({ input, handleChange }: SearchProps) => {
-
   return (
-    <Navbar>
+    <Navbar className='search'>
       <input
         className="search__input"
         type="text"

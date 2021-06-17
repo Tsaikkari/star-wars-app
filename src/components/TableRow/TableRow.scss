@@ -1,22 +1,42 @@
 .table {
   &__row {
-    background-color: #ffffff;
-    border-top: solid 2px #e0e6ec;
+    min-height: 2rem;
   }
 
   &__row:hover {
     background-color: rgb(8, 207, 8);
   }
 
-  &__row--charactername {
-    padding-left: 6rem;
-    color: #36322a;
-    font-size: large;
+  &__row--cname {
+    padding-left: 1rem;
+    color: #fff;
+    font-family: 'Black Ops One', cursive;
+    font-family: 'Poiret One', cursive;
+    font-family: 'Gruppo', cursive;
+    font-size: 1.6rem;
     font-weight: bold;
+    text-decoration: none;
 
     &:hover {
-      color: #223b53;
+      color: #000;
       text-decoration: none;
     }
   }
+
+  &__row--starships {
+    color: #fff;
+    font-family: 'Gruppo', cursive;
+    font-size: 1.3rem;
+    font-weight: 900;
+    padding-left: 1rem;
+  }
+}
+
+td {
+  border: solid 2px rgb(58, 108, 216);
+}
+
+tr {
+  border: solid 1px rgb(1, 1, 129);
+  box-shadow: 1px 3px 8px rgb(3, 3, 110);
 }

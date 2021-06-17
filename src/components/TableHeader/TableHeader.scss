@@ -3,20 +3,18 @@ body {
 }
 
 thead {
-  color: #000;
-
-  @media (max-width: 1024px) {
-    background-color: #fff;
-  }
+  background-color: rgb(3, 10, 0);
 }
 
 th.titles {
   &__title--name {
-    padding: 0 0 1.2rem 7.1rem;
+    padding-left: 1.5rem;
+    color: #fff;
   }
 
   &__title--starships {
-    padding: 0 0 1.2rem 0.8rem;
+    padding-left: 1.5rem;
+    color: #fff;
   }
 }
 

@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <div>
       <Navbar className="header">
-        <h2 className="header__header">Star Wars Characters</h2>
+        <h2 className="header__header">Star Wars</h2>
 
       </Navbar>
     </div>

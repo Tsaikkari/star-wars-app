@@ -5,6 +5,10 @@ export type StarWarsActions =
 | GetCharactersAction
 | GetCharAndStarshipAction
 
+export type AppState = {
+  starwars: StarWarsState
+}
+
 export type StarWarsState = {
   list: any[]
   starshipsList: any[]
@@ -20,14 +24,19 @@ export type GetCharactersAction = {
 export type GetCharAndStarshipAction = {
   type: typeof GET_CHAR_AND_STARSHIP
   payload: {
-    char: any
-    starship: any
-    starships: any[]
+    char: Starship
+    starship: Starship
+    starships: Starship[]
   }
 }
 
-export type AppState = {
-  starwars: StarWarsState
+export type Starship = {
+  char: any
+  starship: any[]
+}
+
+export type Character = TableRowProps & {
+  [key: string]: any
 }
 
 export type SearchProps = {
@@ -41,22 +50,13 @@ export type SortingObject = {
 }
 
 export type MainTableProps = {
-  characters: any[]
-  starships: any[]
-}
-
-export type HeaderProps = {
-  cart: boolean
-}
-
-export type Starship = {
-  char: any
-  starship: any[]
+  characters: Character[]
+  starships: Starship[]
 }
 
 export type TableRowProps = {
   name: string
-  starships: any[]
+  starships: Starship[]
 }
 
 export type TableCellProps = {
@@ -64,10 +64,7 @@ export type TableCellProps = {
 }
 
 export type SingleCharacterProps = {
-  flag: string
   name: string
 }
 
-export type Character = TableRowProps & {
-  [key: string]: any
-}
+

@@ -10,6 +10,8 @@ import './StarWarsApp.scss'
 import { fetchCharacters } from '../../redux/actions/starwars'
 import { AppState } from '../../redux/types'
 import useCharacters from '../../hooks/useCharacters'
+import yoda from '../../images/yoda.jpg'
+import space from '../../images/space.jpg'
 
 const StarWarsApp = () => {
   const [input, setInput] = useState('')
@@ -31,7 +33,7 @@ const StarWarsApp = () => {
   }, [])
 
   return (
-    <div className="star-wars-app">
+    <div className="star-wars-app" style={{ backgroundImage : `url(${space})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
       {/* {error && <p>{error}</p>} */}
       <Header />
       <Search input={input} handleChange={handleChange} />

@@ -19,7 +19,7 @@ export default function starwars(
       const { starships } = action.payload
       return {
         ...state,
-        starshipsList: [...starships]
+        starshipsList: [...starships],
       }
 
     default:

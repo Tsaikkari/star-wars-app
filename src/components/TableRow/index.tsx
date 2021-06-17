@@ -17,7 +17,7 @@ const TableRow = ({ name, starships }: TableRowProps) => {
           
           return (
             ship.char === name && 
-            <div className="table__row--languages" key={index}>
+            <div className="table__row--starships" key={index}>
               {ship.starship}
             </div>
           )
