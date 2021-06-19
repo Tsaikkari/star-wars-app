@@ -5,7 +5,6 @@ import { Spinner } from 'react-bootstrap'
 import Header from '../Header'
 import Search from '../Search'
 import MainTable from '../MainTable'
-import './StarWarsApp.scss'
 
 import { fetchCharacters } from '../../redux/actions/starwars'
 import { AppState } from '../../redux/types'

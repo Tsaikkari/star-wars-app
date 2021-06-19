@@ -4,7 +4,6 @@ import TableHeader from '../TableHeader'
 import TableRow from '../TableRow'
 
 import { MainTableProps } from '../../redux/types'
-import './MainTable.scss'
 
 const MainTable = ({ characters, starships }: MainTableProps) => {
   return (
