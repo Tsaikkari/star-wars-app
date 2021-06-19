@@ -32,7 +32,6 @@ const StarWarsApp = () => {
 
   return (
     <div className="star-wars-app" style={{ backgroundImage : `url(${space})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
-      {/* {error && <p>{error}</p>} */}
       <Header />
       <Search input={input} handleChange={handleChange} />
       {loading ? (
