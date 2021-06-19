@@ -41,9 +41,9 @@ const SingleCharacter = () => {
       <Card.Body>
         <p className='singlecharacter__intro'>{`${name} was born in ${birth_year}.`} </p>
         {gender === 'female' ? (
-          <p className='singlecharacter__intro'>{`Her eyes are ${eye_color}, she is ${height} cm tall and she weights ${mass} kg.`}</p>
+          <p className='singlecharacter__intro'>{`Her eyes are ${eye_color}, she is ${height} cm tall and weights ${mass} kg.`}</p>
         ) : (
-          <p className='singlecharacter__intro'>{`His eyes are ${eye_color}, he is ${height} cm tall and he weights ${mass} kg.`}</p>
+          <p className='singlecharacter__intro'>{`His eyes are ${eye_color}, he is ${height} cm tall and weights ${mass} kg.`}</p>
         )}
         <div>
           <button
