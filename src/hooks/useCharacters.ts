@@ -12,6 +12,7 @@ export default function useCharacters(input: string) {
 
   useEffect(() => {
     setCharacters(filterCharacters(allCharacters, input))
+    console.log('characters', allCharacters)
   }, [input, allCharacters])
 
   return characters

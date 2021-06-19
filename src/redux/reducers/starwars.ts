@@ -15,12 +15,12 @@ export default function starwars(
         list: [...characters],
       }
     case GET_CHAR_AND_STARSHIP:
-      console.log('getcharandstarship', action.payload)
       const { starships } = action.payload
       return {
         ...state,
         starshipsList: [...starships],
       }
+
 
     default:
       return state

@@ -66,5 +66,3 @@ export type TableCellProps = {
 export type SingleCharacterProps = {
   name: string
 }
-
-

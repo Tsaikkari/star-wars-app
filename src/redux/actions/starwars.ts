@@ -1,10 +1,10 @@
 import { Dispatch } from 'redux'
-import { Starship } from '../types'
 
 import {
   GetCharactersAction,
   GET_CHARACTERS,
   GET_CHAR_AND_STARSHIP,
+  Starship,
 } from '../types'
 
 export function getCharacters(characters: any): GetCharactersAction {
@@ -32,20 +32,19 @@ export function fetchCharacters() {
       .then((res) => res.json())
       .then((characters) => {
         dispatch(getCharacters(characters.results))
-        characters.results.forEach((char: any) => {
-          char.starships.map(async (starship: any) => {
-            return fetch(starship.replace('http', 'https'))
-              .then((res) => res.json())
-              .then((starship) => {
-                //console.log(`${char.name} has ${starship.name}`)
-                starships.push({
-                  char: char.name,
-                  starship: starship.name,
+          characters.results.forEach((char: any) => {
+            char.starships.map(async (starship: any) => {
+              fetch(starship)
+                .then((res) => res.json())
+                .then((starship) => {
+                  starships.push({
+                    char: char.name,
+                    starship: starship.name,
+                  })
+                  dispatch(GetCharAndStarship(starships))
                 })
-                dispatch(GetCharAndStarship(starships))
-              })
+            })
           })
-        })
       })
       .catch((error) => console.log('error happend', error))
   }

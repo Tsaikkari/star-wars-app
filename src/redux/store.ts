@@ -7,7 +7,7 @@ import createRootReducer from '../redux/reducers'
 export const initState: AppState = {
   starwars: {
     list: [],
-    starshipsList: []
+    starshipsList: [],
    },
 }
 

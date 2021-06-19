@@ -10,14 +10,12 @@ import './StarWarsApp.scss'
 import { fetchCharacters } from '../../redux/actions/starwars'
 import { AppState } from '../../redux/types'
 import useCharacters from '../../hooks/useCharacters'
-import yoda from '../../images/yoda.jpg'
 import space from '../../images/space.jpg'
 
 const StarWarsApp = () => {
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(true)
   const starships = useSelector((state: AppState) => state.starwars.starshipsList)
-  console.log('starships', starships)
 
   const filteredCharacters = useCharacters(input)
 
